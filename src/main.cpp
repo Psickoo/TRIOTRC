@@ -53,10 +53,10 @@ void streamCallback(MultiPathStreamData stream) {
           Servo1.write(servo1);
         } 
 
-        else if(strcmp(childPath, "/servo2") == 0) {
-          int servo2 = value.toInt();
-          Servo2.write(servo2);
-        }
+        // else if(strcmp(childPath, "/servo2") == 0) {
+        //   int servo2 = value.toInt();
+        //   Servo2.write(servo2);
+        // }
 
         else if (strcmp(childPath, "/up") == 0) {
           if (value == "true") {
@@ -139,11 +139,11 @@ void setup(){
   digitalWrite(in3,LOW);
   digitalWrite(in4,LOW);
   // pinMode(LED_BUILTIN,OUTPUT);
-  pinMode(Verservo, OUTPUT);
+  // pinMode(Verservo, OUTPUT);
   pinMode(Horservo,OUTPUT);
-  Servo1.attach(Verservo);
-  Servo2.attach(Horservo);
-  Servo1.write(90);
+  Servo1.attach(Horservo);
+  // Servo2.attach(Verservo);
+  // Servo1.write(90);
   Serial.begin(115200);
   Serial.setDebugOutput(true);
   Serial.println();

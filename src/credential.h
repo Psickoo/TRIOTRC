@@ -10,8 +10,8 @@
 #define in4 12
 // #define LED_BUILTIN 2
 
-#define Verservo 2
-#define Horservo 3
+#define Verservo 3
+#define Horservo 2
 
 // #define API_KEY "AIzaSyCF8o74cPK76TpAD_WL5FNcXDyfYdLChmk"
 // #define DATABASE_URL "https://triot-5522f-default-rtdb.asia-southeast1.firebasedatabase.app/"
