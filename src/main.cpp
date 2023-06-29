@@ -58,66 +58,78 @@ void streamCallback(MultiPathStreamData stream) {
         //   Servo2.write(servo2);
         // }
 
-        else if (strcmp(childPath, "/up") == 0) {
-          if (value == "true") {
-            // Serial.printf("helloimunderthewater");
-            digitalWrite(in1, LOW);
-            digitalWrite(in2, HIGH);
-            digitalWrite(in3, HIGH);
-            digitalWrite(in4, LOW);
-          }
-          else { 
-            digitalWrite(in1, LOW);
-            digitalWrite(in2, LOW);
-            digitalWrite(in3, LOW);
-            digitalWrite(in4, LOW);
-          }
+        else if (strcmp(childPath, "/up") == 0)
+      {
+        if (value == "true")
+        {
+          digitalWrite(in1, LOW);
+          digitalWrite(in2, HIGH);
+          digitalWrite(in3, LOW);
+          digitalWrite(in4, HIGH);
+          // Serial.printf("helloimunderthewater");
         }
-        else if (strcmp(childPath, "/down") == 0) {
-          if (value == "true") {
-            digitalWrite(in1, HIGH);
-            digitalWrite(in2, LOW);
-            digitalWrite(in3, LOW);
-            digitalWrite(in4, HIGH);
-          }
-          else{
-            digitalWrite(in1, LOW);
-            digitalWrite(in2, LOW);
-            digitalWrite(in3, LOW);
-            digitalWrite(in4, LOW);
-          }
-        }
-        else if (strcmp(childPath, "/right") == 0) {
-          if (value == "true") {
-            digitalWrite(in1, LOW);
-            digitalWrite(in2, HIGH);
-            digitalWrite(in3, LOW);
-            digitalWrite(in4, HIGH);
-          }
-          else {
-            digitalWrite(in1, LOW);
-            digitalWrite(in2, LOW);
-            digitalWrite(in3, LOW);
-            digitalWrite(in4, LOW);
-          }
-        }
-        else if (strcmp(childPath, "/left") == 0) {
-          if (value == "true") {
-            digitalWrite(in1, HIGH);
-            digitalWrite(in2, LOW);
-            digitalWrite(in3, HIGH);
-            digitalWrite(in4, LOW);
-          }
-          else{
-            digitalWrite(in1, LOW);
-            digitalWrite(in2, LOW);
-            digitalWrite(in3, LOW);
-            digitalWrite(in4, LOW);
-          }
+        else
+        {
+          digitalWrite(in1, LOW);
+          digitalWrite(in2, LOW);
+          digitalWrite(in3, LOW);
+          digitalWrite(in4, LOW);
         }
       }
-    };
-  }
+      else if (strcmp(childPath, "/down") == 0)
+      {
+        if (value == "true")
+        {
+          digitalWrite(in1, HIGH);
+          digitalWrite(in2, LOW);
+          digitalWrite(in3, HIGH);
+          digitalWrite(in4, LOW);
+        }
+        else
+        {
+          digitalWrite(in1, LOW);
+          digitalWrite(in2, LOW);
+          digitalWrite(in3, LOW);
+          digitalWrite(in4, LOW);
+        }
+      }
+      else if (strcmp(childPath, "/right") == 0)
+      {
+        if (value == "true")
+        {
+          digitalWrite(in1, HIGH);
+          digitalWrite(in2, LOW);
+          digitalWrite(in3, LOW);
+          digitalWrite(in4, HIGH);
+        }
+        else
+        {
+          digitalWrite(in1, LOW);
+          digitalWrite(in2, LOW);
+          digitalWrite(in3, LOW);
+          digitalWrite(in4, LOW);
+        }
+      }
+      else if (strcmp(childPath, "/left") == 0)
+      {
+        if (value == "true")
+        {
+          digitalWrite(in1, LOW);
+          digitalWrite(in2, HIGH);
+          digitalWrite(in3, HIGH);
+          digitalWrite(in4, LOW);
+        }
+        else
+        {
+          digitalWrite(in1, LOW);
+          digitalWrite(in2, LOW);
+          digitalWrite(in3, LOW);
+          digitalWrite(in4, LOW);
+        }
+      }
+    }
+  };
+}
 
 void streamTimeoutCallback(bool timeout) {
   if (timeout)
